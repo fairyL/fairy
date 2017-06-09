@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    {% block meta_extra %}{% endblock %}
+	<link rel="shortcut icon" href="">
+    <link rel="stylesheet" type="text/css" href="{{config.CSS_BOOTSTRAP}}">
+	<link rel="stylesheet" type="text/css" href="{{config.CSS_FRAME}}">
+    {% block head_extra %}{% endblock %}
+</head>
+
+<body>
+	<!--nav-->
+    headers
+    {% block body_body %}{% endblock %}
+    <!--footer-->
+    footers
+    <script type="text/javascript" src="{{config.JS_JQUERY}}"></script>
+    <script type="text/javascript" src="{{config.JS_BOOTSTRAP}}"></script>
+    <script type="text/javascript" src="{{config.JS_FRAME}}"></script>
+	{% block body_endjs %}{% endblock %}
+</body>
+
+</html>

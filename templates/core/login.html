@@ -1,0 +1,33 @@
+{% extends frame %}
+{% block head_extra %}
+<title>登陆</title>
+{% endblock %}
+
+{% block body_body %}
+<input id="uname" />
+<input id="pswd" />
+<button onclick="login();" >登陆</button>
+{% endblock %}
+
+{% block body_endjs %}
+<script>
+function login(){
+    var username = $('#uname').val();
+    var pswd = $('#pswd').val();
+    var data = {};
+    data.username = username;
+    data.password = pswd;
+    $.ajax({
+        url:"/postlogin/",
+        type:'post',
+        data:data,
+        success:function(obj){
+            alert('成功');
+            console.log(obj['jxuser']['username'])
+            console.log(obj['jxuser']['test'])
+            $('body').append("<div><img src='"+obj['jxuser']['icon']+"'/></div>")
+        }
+    });
+}
+</script>
+{% endblock %}

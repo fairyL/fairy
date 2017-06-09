@@ -1,0 +1,12 @@
+/.project
+*.pyc
+*.json
+*.log
+*.tsv
+.idea
+*.swp
+tags
+count.txt
+count.txt
+/jxweb/settings.py
+__init__.py
